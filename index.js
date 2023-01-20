@@ -25,6 +25,10 @@ carouselElem.addEventListener('touchend', (evt) => {
 window.addEventListener('resize', () => {
     roll()
 })
+setInterval(()=>{
+    handleRightActivation();
+    roll();
+}, 4000)
 
 const handleRightActivation = () => {
     let index;
