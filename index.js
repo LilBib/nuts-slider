@@ -5,10 +5,10 @@ const navCollection = document.querySelectorAll('.nav')
 const carouselElem = document.querySelector('.carousel')
 let xDown = null;                                                        
 let yDown = null;
+let intervalID = null;
 
 rightArrowElem.addEventListener('click', () => {
-    handleRightActivation();
-    roll();
+    handleMoveRight();
 })
 leftArrowElem.addEventListener('click', () => {
     handleLeftActivation();
@@ -25,10 +25,6 @@ carouselElem.addEventListener('touchend', (evt) => {
 window.addEventListener('resize', () => {
     roll()
 })
-window.setInterval(()=>{
-    handleRightActivation();
-    roll();
-}, 4000)
 
 const handleRightActivation = () => {
     let index;
@@ -93,7 +89,7 @@ const roll = () => {
             const carouselElemCoords = carouselElem.getBoundingClientRect();
             carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.left + componentContainer.left - (clientWidth - (componentContainer.right - componentContainer.left))/2 ) + "px)"
         }
-    } else if (clientWidth > 320) {
+    } else if (clientWidth > 430) {
         if (activePreviewCoords.right+20>clientWidth) {
             const carouselElemCoords = carouselElem.getBoundingClientRect();
             carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.right - 20 + clientWidth ) + "px)"
@@ -105,11 +101,11 @@ const roll = () => {
     } else {
         if (activePreviewCoords.right+8>clientWidth) {
             const carouselElemCoords = carouselElem.getBoundingClientRect();
-            carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.right - 40 + clientWidth ) + "px)"
+            carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.right -20 + clientWidth - (clientWidth - activePreviewCoords.right + activePreviewCoords.left)/2 ) + "px)"
         }
         if (activePreviewCoords.left-8 < 0) {
             const carouselElemCoords = carouselElem.getBoundingClientRect();
-            carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.left + 8 ) + "px)"
+            carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.left -20 + (clientWidth - activePreviewCoords.right + activePreviewCoords.left)/2) + "px)"
         }
     }
 }
@@ -134,3 +130,11 @@ const handleTouchEnd = (evt) => {
         }                       
     }                                            
 }
+
+function handleMoveRight () {
+    handleRightActivation();
+    roll();
+    window.clearInterval(intervalID)
+    intervalID = window.setInterval(handleMoveRight, 4000)
+}
+intervalID = window.setInterval(handleMoveRight, 4000)

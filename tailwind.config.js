@@ -3,7 +3,7 @@ module.exports = {
   content: ['*'],
   theme: {
     screens: {
-      'mob': '340px',
+      'mob': '430px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',

@@ -521,14 +521,6 @@ video {
   left: 2rem;
 }
 
-.order-1 {
-  order: 1;
-}
-
-.order-3 {
-  order: 3;
-}
-
 .order-first {
   order: -9999;
 }
@@ -566,6 +558,10 @@ video {
   margin-right: 2.5rem;
 }
 
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -576,10 +572,6 @@ video {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.ml-10 {
-  margin-left: 2.5rem;
 }
 
 .flex {
@@ -764,17 +756,9 @@ video {
   background-image: url('./../icons/rightarrow-hover.svg');
 }
 
-@media (min-width: 340px) {
+@media (min-width: 430px) {
   .mob\:order-1 {
     order: 1;
-  }
-
-  .mob\:order-2 {
-    order: 2;
-  }
-
-  .mob\:-order-1 {
-    order: -1;
   }
 
   .mob\:mx-10 {
@@ -786,16 +770,12 @@ video {
     margin-top: 120px;
   }
 
-  .mob\:ml-10 {
-    margin-left: 2.5rem;
+  .mob\:ml-0 {
+    margin-left: 0px;
   }
 
   .mob\:mr-10 {
     margin-right: 2.5rem;
-  }
-
-  .mob\:ml-0 {
-    margin-left: 0px;
   }
 
   .mob\:w-\[260px\] {
