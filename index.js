@@ -78,28 +78,34 @@ const handleLeftActivation = () => {
 
 const roll = () => {
     const activePreviewCoords = document.querySelector('.active').getBoundingClientRect();
+    const componentContainer = document.querySelector('.component-container').getBoundingClientRect();
     const clientWidth = document.body.clientWidth
-    if (clientWidth > 320) {
+    if (clientWidth > 1200) {
+        if (activePreviewCoords.right>componentContainer.right) {
+            const carouselElemCoords = carouselElem.getBoundingClientRect();
+            carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.right + componentContainer.right - (clientWidth - (componentContainer.right - componentContainer.left))/2 ) + "px)"
+        }
+        if (activePreviewCoords.left-20 < 0) {
+            const carouselElemCoords = carouselElem.getBoundingClientRect();
+            carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.left + componentContainer.left - (clientWidth - (componentContainer.right - componentContainer.left))/2 ) + "px)"
+        }
+    } else if (clientWidth > 320) {
         if (activePreviewCoords.right+20>clientWidth) {
             const carouselElemCoords = carouselElem.getBoundingClientRect();
             carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.right - 20 + clientWidth ) + "px)"
-            console.log(carouselElem.style.transform)
         }
         if (activePreviewCoords.left-20 < 0) {
             const carouselElemCoords = carouselElem.getBoundingClientRect();
             carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.left + 20 ) + "px)"
-            console.log(carouselElem.style.transform)
         }
     } else {
         if (activePreviewCoords.right+8>clientWidth) {
             const carouselElemCoords = carouselElem.getBoundingClientRect();
             carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.right - 40 + clientWidth ) + "px)"
-            console.log(carouselElem.style.transform)
         }
         if (activePreviewCoords.left-8 < 0) {
             const carouselElemCoords = carouselElem.getBoundingClientRect();
             carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.left + 8 ) + "px)"
-            console.log(carouselElem.style.transform)
         }
     }
 }
