@@ -92,11 +92,11 @@ const roll = () => {
     } else if (clientWidth > 430) {
         if (activePreviewCoords.right+20>clientWidth) {
             const carouselElemCoords = carouselElem.getBoundingClientRect();
-            carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.right - 20 + clientWidth ) + "px)"
+            carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.right - 40 + clientWidth ) + "px)"
         }
         if (activePreviewCoords.left-20 < 0) {
             const carouselElemCoords = carouselElem.getBoundingClientRect();
-            carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.left + 20 ) + "px)"
+            carouselElem.style.transform = "translateX(" + ( carouselElemCoords.left - activePreviewCoords.left) + "px)"
         }
     } else {
         if (activePreviewCoords.right+8>clientWidth) {
