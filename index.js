@@ -13,6 +13,8 @@ rightArrowElem.addEventListener('click', () => {
 leftArrowElem.addEventListener('click', () => {
     handleLeftActivation();
     roll();
+    window.clearInterval(intervalID)
+    intervalID = window.setInterval(handleMoveRight, 4000)
 })
 
 carouselElem.addEventListener('touchstart', (evt) => {                                 
