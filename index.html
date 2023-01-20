@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Slider</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/dist/output.css" rel="stylesheet">
+  </head>
+  <body class="bg-back w-full min-h-screen">
+    <div class="max-w-[1160px] overflow-hidden mx-auto px-5 xl:px-0 mt-[130px] mob:mt-[120px] grid mob:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 mob:auto-rows-max gap-10">
+        <h1 class="font-roboto text-[40px] mob:text-5xl text-blue font-bold leading-[50px] mob:leading-[60px] col-span-1 xl:col-span-2">Актуальное</h1>
+        <div class="flex col-span-2 sm:col-span-1 lg:col-span-2 row-start-3 sm:row-start-auto">
+            <div class="flex flex-1 items-center">
+                <div class="nav border-b flex-1 h-0 border-blue"></div>
+                <div class="nav border-b flex-1 h-0 border-light-blue"></div>
+                <div class="nav border-b flex-1 h-0 border-light-blue"></div>
+                <div class="nav border-b flex-1 h-0 border-light-blue"></div>
+                <div class="nav border-b flex-1 h-0 border-light-blue"></div>
+                <div class="nav border-b flex-1 h-0 border-light-blue"></div>
+            </div>
+            <div class="mob:order-1 mob:mx-10 order-first leftarrow bg-[url('./../icons/leftarrow.svg')] hover:bg-[url('./../icons/leftarrow-hover.svg')] cursor-pointer w-[60px] h-[60px] mr-10"></div>
+            <div class="mob:ml-0 ml-10 order-last rightarrow bg-[url('./../icons/rightarrow.svg')] hover:bg-[url('./../icons/rightarrow-hover.svg')] cursor-pointer w-[60px] h-[60px]"></div>
+        </div>
+        <div class="carousel flex min-w-max col-span-full items-stretch">
+            <div class="preview active mob:w-[260px] w-[280px] mr-2 mob:mr-10 p-5 border border-blue flex flex-col">
+                <div class="w-full h-[160px] bg-[url('./../icons/preview.svg')] mb-[10px]"></div>
+                <span class="text-blue text-[12px] leading-[22px] font-normal mb-[10px]">10.11.2020 г.</span>
+                <p class="text-blue text-[16px] leading-[26px] font-normal mb-[10px]">Ким и Валерия Брейтбурги написали книгу про искусство</p>
+                <p class="text-blue text-[12px] leading-[22px] font-normal h-[88px] mt-auto">Работа над книгой велась более пяти лет, и действенные методики, описанные в ней, созданные в результате анализа и синтеза идей…</p>
+            </div>
+            <div class="preview mob:w-[260px] w-[280px] mr-2 mob:mr-10 p-5 border border-light-blue flex flex-col">
+                <div class="w-full h-[160px] bg-[url('./../icons/preview.svg')] mb-[10px]"></div>
+                <span class="text-blue text-[12px] leading-[22px] font-normal mb-[10px]">10.11.2020 г.</span>
+                <p class="text-blue text-[16px] leading-[26px] font-normal mb-[10px]">Юрий Колокольников пытается спасти Землю в клипе «Космические силы»</p>
+                <p class="text-blue text-[12px] leading-[22px] font-normal h-[88px] mt-auto">Премьера клипа «Космические силы» группы «Мумий Тролль» состоялась 6 ноября 2020 года.</p>
+            </div>
+            <div class="preview mob:w-[260px] w-[280px] mr-2 mob:mr-10 p-5 border border-light-blue flex flex-col">
+                <div class="w-full h-[160px] bg-[url('./../icons/preview.svg')] mb-[10px]"></div>
+                <span class="text-blue text-[12px] leading-[22px] font-normal mb-[10px]">10.11.2020 г.</span>
+                <p class="text-blue text-[16px] leading-[26px] font-normal mb-[10px]">BTS получили четыре награды MTV EMA</p>
+                <p class="text-blue text-[12px] leading-[22px] font-normal h-[88px] mt-auto">BTS получили четыре награды MTV EMA
+                    27-я ежегодная церемония награждения MTV Europe Music Awards состоялась 8 ноября 2020 г.</p>
+            </div>
+            <div class="preview mob:w-[260px] w-[280px] mr-2 mob:mr-10 p-5 border border-light-blue flex flex-col">
+                <div class="w-full h-[160px] bg-[url('./../icons/preview.svg')] mb-[10px]"></div>
+                <span class="text-blue text-[12px] leading-[22px] font-normal mb-[10px]">10.11.2020 г.</span>
+                <p class="text-blue text-[16px] leading-[26px] font-normal mb-[10px]">Открытие сезона «Ла Скала» отменено</p>
+                <p class="text-blue text-[12px] leading-[22px] font-normal h-[88px] mt-auto">Миланский театр La Scala отменил открытие сезона. Первый спектакль был назначен на 7 декабря — «Лючия ди Ламмермур».</p>
+            </div>
+            <div class="preview mob:w-[260px] w-[280px] mr-2 mob:mr-10 p-5 border border-light-blue flex flex-col">
+                <div class="w-full h-[160px] bg-[url('./../icons/preview.svg')] mb-[10px]"></div>
+                <span class="text-blue text-[12px] leading-[22px] font-normal mb-[10px]">10.11.2020 г.</span>
+                <p class="text-blue text-[16px] leading-[26px] font-normal mb-[10px]">Открытие сезона «Ла Скала» отменено</p>
+                <p class="text-blue text-[12px] leading-[22px] font-normal h-[88px] mt-auto">Миланский театр La Scala отменил открытие сезона. Первый спектакль был назначен на 7 декабря — «Лючия ди Ламмермур».</p>
+            </div>
+            <div class="preview mob:w-[260px] w-[280px] p-5 mob:mr-10 border border-light-blue flex flex-col">
+                <div class="w-full h-[160px] bg-[url('./../icons/preview.svg')] mb-[10px]"></div>
+                <span class="text-blue text-[12px] leading-[22px] font-normal mb-[10px]">10.11.2020 г.</span>
+                <p class="text-blue text-[16px] leading-[26px] font-normal mb-[10px]">Открытие сезона «Ла Скала» отменено</p>
+                <p class="text-blue text-[12px] leading-[22px] font-normal h-[88px] mt-auto">Миланский театр La Scala отменил открытие сезона. Первый спектакль был назначен на 7 декабря — «Лючия ди Ламмермур».</p>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
