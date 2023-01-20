@@ -25,7 +25,7 @@ carouselElem.addEventListener('touchend', (evt) => {
 window.addEventListener('resize', () => {
     roll()
 })
-setInterval(()=>{
+window.setInterval(()=>{
     handleRightActivation();
     roll();
 }, 4000)
