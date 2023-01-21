@@ -120,8 +120,7 @@ const handleTouchEnd = (evt) => {
 
     var xDiff = xDown - xUp;
     var yDiff = yDown - yUp;
-            
-    console.log(xDown,xUp)                                                           
+                                                              
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
         if ( xDiff > 0 ) {
             handleRightActivation();

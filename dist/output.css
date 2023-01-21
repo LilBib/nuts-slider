@@ -748,16 +748,16 @@ video {
   color: rgb(82 124 205 / var(--tw-text-opacity));
 }
 
-.duration-300 {
-  transition-duration: 300ms;
-}
-
 .duration-500 {
   transition-duration: 500ms;
 }
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover\:bg-\[url\(\'\.\/\.\.\/icons\/leftarrow-hover\.svg\'\)\]:hover {
