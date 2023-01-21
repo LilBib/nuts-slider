@@ -140,3 +140,4 @@ function handleMoveRight () {
     intervalID = window.setInterval(handleMoveRight, 4000)
 }
 intervalID = window.setInterval(handleMoveRight, 4000)
+roll();
