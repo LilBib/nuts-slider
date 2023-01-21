@@ -11,10 +11,7 @@ rightArrowElem.addEventListener('click', () => {
     handleMoveRight();
 })
 leftArrowElem.addEventListener('click', () => {
-    handleLeftActivation();
-    roll();
-    window.clearInterval(intervalID)
-    intervalID = window.setInterval(handleMoveRight, 4000)
+    handleMoveLeft();
 })
 
 carouselElem.addEventListener('touchstart', (evt) => {                                 
@@ -120,20 +117,24 @@ const handleTouchEnd = (evt) => {
 
     var xDiff = xDown - xUp;
     var yDiff = yDown - yUp;
-                                                              
+
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
         if ( xDiff > 0 ) {
-            handleRightActivation();
-            roll();
+            handleMoveRight();
         } else {
-            handleLeftActivation();
-            roll();
+            handleMoveLeft();
         }                       
     }                                            
 }
 
 function handleMoveRight () {
     handleRightActivation();
+    roll();
+    window.clearInterval(intervalID)
+    intervalID = window.setInterval(handleMoveRight, 4000)
+}
+function handleMoveLeft () {
+    handleLeftActivation();
     roll();
     window.clearInterval(intervalID)
     intervalID = window.setInterval(handleMoveRight, 4000)
